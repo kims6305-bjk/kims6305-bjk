@@ -73,7 +73,7 @@ DOMAIN FIRST  →  SOURCE OF TRUTH  →  SMALL BUILD  →  REAL MEASUREMENT  →
 ## Portfolio & Contact
 
 상세 사례는 Notion 포트폴리오에서 `문제 → 접근 → 결과 → 증거 → 한계` 순서로 정리합니다.  
-**Portfolio:** 준비 중  
+**Portfolio:** [Notion 포트폴리오](https://fifth-jute-005.notion.site/BJ-Kim-Portfolio-Accounting-Tax-Big-Data-Applied-AI-3d90802ba65380528be6d4dfac5b8181)<br>
 **Email:** [kims6305@naver.com](mailto:kims6305@naver.com)
 
 ---
