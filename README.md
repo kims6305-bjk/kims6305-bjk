@@ -2,6 +2,15 @@
   <img src="assets/bjkim-audit-intelligence-github.png" alt="BJ Kim — Accounting, Tax, Big Data and Applied AI" width="100%" />
 </div>
 
+<p align="center">
+  <a href="https://fifth-jute-005.notion.site/BJ-Kim-Portfolio-Accounting-Tax-Big-Data-Applied-AI-3d90802ba65380528be6d4dfac5b8181"><img src="https://img.shields.io/badge/Portfolio-Notion-000000?style=for-the-badge&logo=notion&logoColor=white" alt="Portfolio" /></a>
+  <a href="mailto:kims6305@naver.com"><img src="https://img.shields.io/badge/Email-kims6305%40naver.com-03C75A?style=for-the-badge&logo=naver&logoColor=white" alt="Email" /></a>
+  <img src="https://img.shields.io/badge/Seoul-South%20Korea-CD2E3A?style=for-the-badge" alt="Seoul, South Korea" />
+  <img src="https://komarev.com/ghpvc/?username=kims6305-bjk&style=for-the-badge&color=0e75b6&label=Profile+Views" alt="Profile views" />
+</p>
+
+<p align="center"><b>한국어</b> · <a href="#english">English</a></p>
+
 # 안녕하세요, BJ Kim입니다
 
 **KOSPI D사 결산 담당 · 프로젝트 기반 데이터 애널리스트**  
@@ -14,6 +23,16 @@
 | Accounting & Tax | Data Analytics | Applied AI |
 |---|---|---|
 | 회계기준·세법·공시·ERP 데이터의 구조를 해석합니다. | SQL·Python으로 대사, 이상 탐지, 재무 분석과 평가 하네스를 만듭니다. | 근거 기반 검색, 에이전트 워크플로, 로컬 자동화 시스템을 구축합니다. |
+
+## Featured Repositories
+
+<p align="center">
+  <a href="https://github.com/kims6305-bjk/pareto-measurement-gates"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=pareto-measurement-gates&theme=github_dark&hide_border=true" alt="pareto-measurement-gates" width="49%" /></a>
+  <a href="https://github.com/kims6305-bjk/app-security-guardian"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=app-security-guardian&theme=github_dark&hide_border=true" alt="app-security-guardian" width="49%" /></a>
+  <a href="https://github.com/kims6305-bjk/aside-combination-jev"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=aside-combination-jev&theme=github_dark&hide_border=true" alt="aside-combination-jev" width="49%" /></a>
+  <a href="https://github.com/kims6305-bjk/chatgpt-web-jjonku-writer"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=chatgpt-web-jjonku-writer&theme=github_dark&hide_border=true" alt="chatgpt-web-jjonku-writer" width="49%" /></a>
+  <a href="https://github.com/kims6305-bjk/kakao-agent-router"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=kakao-agent-router&theme=github_dark&hide_border=true" alt="kakao-agent-router" width="49%" /></a>
+</p>
 
 ## Selected Work
 
@@ -103,13 +122,42 @@ DOMAIN FIRST  →  SOURCE OF TRUTH  →  SMALL BUILD  →  REAL MEASUREMENT  →
 
 ## Tools & Methods
 
-`Python` `SQL` `SQLite` `Excel` `OpenDART` `XBRL` `RAG` `MCP` `LLM Evaluation` `GitHub Actions`
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel" />
+  <img src="https://img.shields.io/badge/OpenDART-1F4E79?style=flat-square" alt="OpenDART" />
+  <img src="https://img.shields.io/badge/XBRL-5C2D91?style=flat-square" alt="XBRL" />
+  <img src="https://img.shields.io/badge/RAG-FF6F00?style=flat-square" alt="RAG" />
+  <img src="https://img.shields.io/badge/MCP-111111?style=flat-square&logo=anthropic&logoColor=white" alt="MCP" />
+  <img src="https://img.shields.io/badge/LLM%20Evaluation-8A2BE2?style=flat-square" alt="LLM Evaluation" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright" />
+</p>
 
 ## Portfolio & Contact
 
 상세 사례는 Notion 포트폴리오에서 `문제 → 접근 → 결과 → 증거 → 한계` 순서로 정리합니다.  
 **Portfolio:** [Notion 포트폴리오](https://fifth-jute-005.notion.site/BJ-Kim-Portfolio-Accounting-Tax-Big-Data-Applied-AI-3d90802ba65380528be6d4dfac5b8181)<br>
 **Email:** [kims6305@naver.com](mailto:kims6305@naver.com)
+
+---
+
+<a id="english"></a>
+
+## English
+
+**Year-end closing lead at a KOSPI-listed company · Project-based data analyst**
+**Accounting & tax domain × big data analytics × applied AI automation**
+
+I majored in accounting and hold a master's degree in big data. Since July 2017 I have worked in accounting and tax (8 years 5 months of active experience), covering financial closing, DART/XBRL disclosure, tax and internal control at a KOSPI-listed company, and working as a data analyst on outside projects. I turn business problems into data analysis and working AI systems, and I value **official sources, reproducible measurement and real execution results** over feature counts.
+
+- **Pareto Measurement Gates** — a public harness that measures quality and cost together to decide whether a verification layer is kept, reduced or removed (pre-registration → blind scoring → statistical verdict).
+- **Accounting & tax intelligence** *(sanitized)* — cited answers grounded in K-IFRS, tax law, rulings and interpretations, measured with gold sets and replays.
+- **Agent safety tooling** — fail-closed browser action receipts, local-only app security checks, and a guarded ChatGPT-web Git writer.
+
+Every public repo states its limits. Internal data and endpoints are never published; portfolios use synthetic data and anonymized results only.
 
 ---
 
