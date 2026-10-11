@@ -48,12 +48,13 @@
 
 ### [ChatGPT Web Jjonku Writer](https://github.com/kims6305-bjk/chatgpt-web-jjonku-writer)
 
-웹 ChatGPT가 로컬 저장소를 직접 수정하고 테스트·커밋·PR까지 수행할 수 있게 만든 제한형 MCP Git writer입니다.
+웹 ChatGPT 채팅 사용량을 Claude·Codex 한도의 예비로 쓰도록 만든 도구 모음입니다. 웹 채팅은 Codex 사용량과 별도로 계산되며, 이 점은 OpenAI 공식 문서로 확인했습니다.
 
-- shell 미노출
-- 저장소·브랜치·보호 경로 제한
-- 실패 가드 self-check와 happy-path E2E 테스트
-- 휴대폰에서 요청하고 PR로 검토하는 작업 흐름
+- **Writer:** 웹 ChatGPT가 로컬 저장소를 읽고 고치고 테스트·커밋·PR까지 하는 제한형 MCP Git writer (shell 미노출, 저장소·브랜치·보호 경로 제한)
+- **Handoff:** 웹 ChatGPT가 로컬 에이전트에 작업을 넘기고, 사람이 ID로 승인한 것만 실행
+- **webgpt/:** 로컬 페이지에서 웹 ChatGPT에 질문·테스트 주도 코드 작성·사용자 스킬 실행
+- 실패 가드 self-check와 happy-path E2E 테스트 포함
+- 한계 명시: `webgpt/`는 비공식 웹 UI 자동화라 약관 위반 위험이 있음
 
 ### [Kakao Agent Router](https://github.com/kims6305-bjk/kakao-agent-router)
 
