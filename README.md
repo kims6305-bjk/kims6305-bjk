@@ -78,6 +78,18 @@ AI가 브라우저에서 클릭·입력하기 전에 정책으로 막고, 실행
 - 카톡 연결 방식 6가지를 4축(양방향·단톡방·툴콜·추가 인증)으로 비교한 표 포함
 - 한계 명시: 비공식 LOCO 전송층은 카카오 약관 위반 위험, 봇 전용 계정 필수
 
+### [App Security Guardian](https://github.com/kims6305-bjk/app-security-guardian)
+
+내가 소유한 웹앱을 로컬에서만 점검하는 방어용 보안 점검 스킬입니다. 규칙을 새로 만들지 않고 검증된 오픈소스 스캐너를 순서대로 돌려 결과를 JSON 하나로 묶습니다.
+
+- **scan(화이트박스):** Semgrep·gitleaks·osv-scanner로 위험 코드 패턴, git 기록 속 비밀키, 취약 의존성 점검
+- **blackbox:** 보안 헤더(CSP·프레이밍·nosniff), 쿠키 플래그, 경로 탈출, CORS 와일드카드 점검
+- **attack:** nuclei 시그니처 능동 점검 (dos·fuzz·intrusive 제외, 외부 OAST 콜백 끔)
+- 안전장치를 코드로 강제: 대상은 `127.0.0.1`만, `--authorized` 없으면 요청 0건, 비밀값은 보고서에 미기록
+- 단위 테스트 + 뮤테이션 검사 (일부러 망가뜨린 검사 로직을 테스트가 모두 잡아야 통과)
+- 루트 `SKILL.md`로 Claude Code·Codex·Hermes·OpenClaw 에이전트 스킬로 사용, 한/영 README·인포그래픽
+- 한계 명시: 발견 항목은 사람이 확인할 후보이며 보안 인증이나 완전한 침투 테스트가 아님. 시그니처 기반이라 비즈니스 로직 결함은 못 찾음
+
 ## How I Work
 
 ```text
