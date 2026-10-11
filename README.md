@@ -56,6 +56,18 @@
 - 실패 가드 self-check와 happy-path E2E 테스트 포함
 - 한계 명시: `webgpt/`는 비공식 웹 UI 자동화라 약관 위반 위험이 있음
 
+### [Aside Combination Jev](https://github.com/kims6305-bjk/aside-combination-jev)
+
+AI가 브라우저에서 클릭·입력하기 전에 정책으로 막고, 실행 기록을 영수증으로 남기는 로컬 하네스입니다. 정책은 기본적으로 행동을 막는 쪽(fail-closed)으로 동작합니다.
+
+- 행동 전 의도 기록 → 실행 → 재관찰 → 완료 조건 검사
+- 거부 규칙이 허용 규칙보다 우선, 민감·미분류 행동은 사람 승인 필요
+- SHA-256 해시체인 영수증과 네트워크 없는 오프라인 검증기
+- 요청·관찰·영수증 경계에서 비밀값 차단
+- Hermes 스킬과 MCP 서버(`aside-jav-mcp`) 포함
+- 로컬 Playwright 예제로 4개 사례 실측 (LIVE PASS 4/4)
+- 한계 명시: 브라우저 드라이버나 안전 보장이 아님. 어댑터와 계정 책임은 운영자에게 있고, 영수증 검증은 기록의 일관성만 증명함
+
 ### [Kakao Agent Router](https://github.com/kims6305-bjk/kakao-agent-router)
 
 카카오톡 방에서 주인이 AI 에이전트에게 일을 시키고(툴콜), 채팅 인터뷰로 봇에 새 기능을 추가하는 최소 라우터입니다. 실제 운영 중인 카톡 봇에서 라우터 층만 떼어내 일반화했습니다.
