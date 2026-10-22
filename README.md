@@ -32,6 +32,8 @@
   <a href="https://github.com/kims6305-bjk/aside-combination-jev"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=aside-combination-jev&theme=github_dark&hide_border=true" alt="aside-combination-jev" width="49%" /></a>
   <a href="https://github.com/kims6305-bjk/chatgpt-web-jjonku-writer"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=chatgpt-web-jjonku-writer&theme=github_dark&hide_border=true" alt="chatgpt-web-jjonku-writer" width="49%" /></a>
   <a href="https://github.com/kims6305-bjk/kakao-agent-router"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=kakao-agent-router&theme=github_dark&hide_border=true" alt="kakao-agent-router" width="49%" /></a>
+  <a href="https://github.com/kims6305-bjk/aside-mcp-gateway"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=aside-mcp-gateway&theme=github_dark&hide_border=true" alt="aside-mcp-gateway" width="49%" /></a>
+  <a href="https://github.com/kims6305-bjk/n8n-to-agent-conversion"><img src="https://github-readme-stats.vercel.app/api/pin/?username=kims6305-bjk&repo=n8n-to-agent-conversion&theme=github_dark&hide_border=true" alt="n8n-to-agent-conversion" width="49%" /></a>
 </p>
 
 ## Selected Work
@@ -109,6 +111,26 @@ AI가 브라우저에서 클릭·입력하기 전에 정책으로 막고, 실행
 - 루트 `SKILL.md`로 Claude Code·Codex·Hermes·OpenClaw 에이전트 스킬로 사용, 한/영 README·인포그래픽
 - 한계 명시: 발견 항목은 사람이 확인할 후보이며 보안 인증이나 완전한 침투 테스트가 아님. 시그니처 기반이라 비즈니스 로직 결함은 못 찾음
 
+### [Aside MCP Gateway](https://github.com/kims6305-bjk/aside-mcp-gateway)
+
+로그인된 Aside 브라우저 하나를 여러 AI 클라이언트(Claude Code·ChatGPT·개인 봇)가 MCP로 함께 쓰게 하는 상주형 게이트웨이입니다. 공식 `aside mcp`(stdio)를 사설망 안의 HTTP MCP 서버로 바꿉니다.
+
+- 클라이언트별 Bearer 토큰, 명명 세션(재연결해도 같은 브라우저·JS 스코프), 비동기 잡
+- 모든 브라우저 코드를 read/write/destructive로 분류, destructive는 사람 승인 없이 실행 안 함
+- 승인 코드는 사람의 DM으로만 전달 — 감사에서 찾은 **에이전트 자기승인 구멍**을 막은 구조
+- 루트 `SKILL.md`로 Claude Code·Codex 등에서 바로 사용, 한/영 README·QUICKSTART
+- 한계 명시: Aside 계정·공식 CLI 필요, 인터넷 직접 노출 금지(Tailscale/VPN 뒤에서만), 코드 패턴 분류라 우회 가능성은 남음
+
+### [n8n to Agent Conversion](https://github.com/kims6305-bjk/n8n-to-agent-conversion)
+
+n8n에서 내보낸 워크플로우를 n8n 서버 없이 도는 **Hermes·Claude Code 스킬**(`SKILL.md` + 순수 Node.js)로 바꾸는 CLI입니다. [n8n-to-claw](https://github.com/just-claw-it/n8n-to-claw)(MIT)를 바탕으로 했습니다.
+
+- 결정론 우선: 알림 체인·직선 HTTP 체인·`={{ }}` 표현식은 LLM 없이 코드로 변환(매번 같은 결과, 비용 0)
+- 나머지만 LLM — 이미 로그인한 `hermes`/`claude` CLI(OAuth)를 써서 API 키 불필요, 도구 없이 실행해 프롬프트 인젝션 차단
+- 생성 코드는 `tsc` 통과 필수(실패 시 1회 재시도), 하위 워크플로우는 부모→자식→손자 어느 깊이든 패키징
+- 스텁·축소된 노드는 전부 `warnings.json`에 기록, 테스트 289개
+- 한계 명시: LLM 코드는 컴파일돼도 논리가 틀릴 수 있어 실행 전 검토 필요, 자격증명은 자리표시자만 생성
+
 ## How I Work
 
 ```text
@@ -155,7 +177,8 @@ I majored in accounting and hold a master's degree in big data. Since July 2017 
 
 - **Pareto Measurement Gates** — a public harness that measures quality and cost together to decide whether a verification layer is kept, reduced or removed (pre-registration → blind scoring → statistical verdict).
 - **Accounting & tax intelligence** *(sanitized)* — cited answers grounded in K-IFRS, tax law, rulings and interpretations, measured with gold sets and replays.
-- **Agent safety tooling** — fail-closed browser action receipts, local-only app security checks, and a guarded ChatGPT-web Git writer.
+- **Agent safety tooling** — fail-closed browser action receipts, local-only app security checks, a guarded ChatGPT-web Git writer, and an MCP gateway that shares one logged-in browser across agents behind a human approval gate the agent can't approve itself.
+- **n8n to Agent Conversion** — a CLI that turns n8n workflows into Hermes / Claude Code skills: deterministic templates first, an OAuth-logged-in agent CLI (no API key) only for the rest.
 
 Every public repo states its limits. Internal data and endpoints are never published; portfolios use synthetic data and anonymized results only.
 
