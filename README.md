@@ -67,6 +67,26 @@
 - CP949·파일 형식·자리수 검증
 - 실행되는 더미와 실제로 유효한 결과물을 구분하는 원문 대조 게이트
 
+### Korean Tax Calculation Engine `Sanitized`
+
+LLM이 세액을 암산하지 않도록, 계산은 결정론 엔진이 하고 설명만 LLM이 맡는 한국 세금 계산기입니다. 법조문 원문과 국세청 책자·서식·공식 계산기 결과만 근거로 삼습니다.
+
+- 법인세·소득세·원천·부가가치세·상속·증여·양도·가산세 등 계산 도구 75개 (CLI·MCP)
+- 연도별 세율·한도는 코드가 아닌 표로 관리하고, 행마다 근거 조문과 법령 원문 해시(sha256)를 연결
+- 정답 우선순위: 국세청 작성사례 > 홈택스·공식 계산기 실행 결과 > 해석례·심판례 > 조문 손계산
+- 골든 테스트와 세율표 출처 ↔ 법령 원문 해시 대조 검사
+- 한계 명시: 참고용 계산이며 신고 책임은 사용자에게 있음. 해석이 갈리는 쟁점은 `주의`로 표시하고, 지원 연도 밖이거나 입력이 부족하면 추정하지 않고 멈춤
+
+### KRW Valuation Toolkit `Sanitized`
+
+QuantLib 기반으로 원화 시장 평가 엔진을 묶고, 은행이 제시한 파생상품 평가금액을 공개 시장데이터로 독립 재계산하는 검토자용 도구입니다.
+
+- 옵션·변동성(BSM·이항트리·몬테카를로·Heston·SABR), 금리커브·IRS·CRS, DCF·멀티플·피어 리샘플링
+- OpenDART·KRX·ECOS·FRED 등 공개 데이터 수집과 KOSPI200 내재변동성 표면
+- 결산 검산: 통화선도·통화스왑 평가명세를 계약조건과 공개 데이터로 재계산해 사전에 정한 허용오차로 PASS/CHECK 판정
+- 유효이자율(IFRS 9) 상각표와 위험회피회계 보조 계산, 테스트는 전부 오프라인·합성 데이터
+- 한계 명시: 장부 기준 평가가 아니라 검토용 도구. 무료 원화 IRS·CRS 베이시스 커브가 없어 일부 모형은 단순화하며, `CHECK`는 "은행이 틀렸다"가 아니라 "더 확인할 것"이라는 뜻
+
 ### [ChatGPT Web Jjonku Writer](https://github.com/kims6305-bjk/chatgpt-web-jjonku-writer)
 
 웹 ChatGPT 채팅 사용량을 Claude·Codex 한도의 예비로 쓰도록 만든 도구 모음입니다. 웹 채팅은 Codex 사용량과 별도로 계산되며, 이 점은 OpenAI 공식 문서로 확인했습니다.
@@ -177,6 +197,8 @@ I majored in accounting and hold a master's degree in big data. Since July 2017 
 
 - **Pareto Measurement Gates** — a public harness that measures quality and cost together to decide whether a verification layer is kept, reduced or removed (pre-registration → blind scoring → statistical verdict).
 - **Accounting & tax intelligence** *(sanitized)* — cited answers grounded in K-IFRS, tax law, rulings and interpretations, measured with gold sets and replays.
+- **Korean tax calculation engine** *(sanitized)* — a deterministic calculator (75 tools, CLI/MCP) built only from statutes and official NTS materials, so the LLM explains and never computes the tax itself.
+- **KRW valuation toolkit** *(sanitized)* — QuantLib-based valuation engines plus an independent, reproducible check of bank FX forward / cross-currency swap statements from public market data (a reviewer's tool, not a valuation of record).
 - **Agent safety tooling** — fail-closed browser action receipts, local-only app security checks, a guarded ChatGPT-web Git writer, and an MCP gateway that shares one logged-in browser across agents behind a human approval gate the agent can't approve itself.
 - **n8n to Agent Conversion** — a CLI that turns n8n workflows into Hermes / Claude Code skills: deterministic templates first, an OAuth-logged-in agent CLI (no API key) only for the rest.
 
