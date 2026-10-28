@@ -67,7 +67,7 @@
 - CP949·파일 형식·자리수 검증
 - 실행되는 더미와 실제로 유효한 결과물을 구분하는 원문 대조 게이트
 
-### Korean Tax Calculation Engine `Sanitized`
+### Korean Tax Calculation Engine `Private`
 
 LLM이 세액을 암산하지 않도록, 계산은 결정론 엔진이 하고 설명만 LLM이 맡는 한국 세금 계산기입니다. 법조문 원문과 국세청 책자·서식·공식 계산기 결과만 근거로 삼습니다.
 
@@ -77,7 +77,7 @@ LLM이 세액을 암산하지 않도록, 계산은 결정론 엔진이 하고 �
 - 골든 테스트와 세율표 출처 ↔ 법령 원문 해시 대조 검사
 - 한계 명시: 참고용 계산이며 신고 책임은 사용자에게 있음. 해석이 갈리는 쟁점은 `주의`로 표시하고, 지원 연도 밖이거나 입력이 부족하면 추정하지 않고 멈춤
 
-### KRW Valuation Toolkit `Sanitized`
+### KRW Valuation Toolkit `Private`
 
 QuantLib 기반으로 원화 시장 평가 엔진을 묶고, 은행이 제시한 파생상품 평가금액을 공개 시장데이터로 독립 재계산하는 검토자용 도구입니다.
 
@@ -197,8 +197,8 @@ I majored in accounting and hold a master's degree in big data. Since July 2017 
 
 - **Pareto Measurement Gates** — a public harness that measures quality and cost together to decide whether a verification layer is kept, reduced or removed (pre-registration → blind scoring → statistical verdict).
 - **Accounting & tax intelligence** *(sanitized)* — cited answers grounded in K-IFRS, tax law, rulings and interpretations, measured with gold sets and replays.
-- **Korean tax calculation engine** *(sanitized)* — a deterministic calculator (75 tools, CLI/MCP) built only from statutes and official NTS materials, so the LLM explains and never computes the tax itself.
-- **KRW valuation toolkit** *(sanitized)* — QuantLib-based valuation engines plus an independent, reproducible check of bank FX forward / cross-currency swap statements from public market data (a reviewer's tool, not a valuation of record).
+- **Korean tax calculation engine** *(private repo)* — a deterministic calculator (75 tools, CLI/MCP) built only from statutes and official NTS materials, so the LLM explains and never computes the tax itself.
+- **KRW valuation toolkit** *(private repo)* — QuantLib-based valuation engines plus an independent, reproducible check of bank FX forward / cross-currency swap statements from public market data (a reviewer's tool, not a valuation of record).
 - **Agent safety tooling** — fail-closed browser action receipts, local-only app security checks, a guarded ChatGPT-web Git writer, and an MCP gateway that shares one logged-in browser across agents behind a human approval gate the agent can't approve itself.
 - **n8n to Agent Conversion** — a CLI that turns n8n workflows into Hermes / Claude Code skills: deterministic templates first, an OAuth-logged-in agent CLI (no API key) only for the rest.
 
