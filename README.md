@@ -47,7 +47,7 @@
 - 진단 비용 1,650콜 → 165콜
 - 효과가 없던 메인 프로브를 실제로 폐기한 전 과정 공개
 
-### Accounting & Tax Intelligence Systems `Sanitized`
+### Accounting & Tax Intelligence Systems `Private`
 
 회계기준, 세법, 판례와 실무 자료를 검색·대조해 근거와 함께 답하는 AI 시스템을 운영합니다.
 
@@ -56,9 +56,10 @@
 - 검색 품질을 골드셋과 리플레이로 측정
 - 민감 데이터와 공개 지식소스를 분리한 로컬 우선 설계
 
-> 내부 데이터와 운영 주소는 공개하지 않으며, 포트폴리오에는 합성 데이터와 익명화된 평가 결과만 사용합니다.
+> 내부 데이터와 운영 주소는 공개하지 않으며, 포트폴리오에는 합성 데이터와 익명화된 평가 결과만 사용합니다.  
+> Private repository (separate account) — available on request.
 
-### Tax Filing Automation `Sanitized`
+### Tax Filing Automation `Private`
 
 국세청 공식 수록형식과 신고 매뉴얼을 기준으로 전자신고 변환파일을 생성하는 로컬 데스크탑 워크플로를 구축했습니다.
 
@@ -66,6 +67,8 @@
 - 공식 고정길이 레코드 규격 기반 출력
 - CP949·파일 형식·자리수 검증
 - 실행되는 더미와 실제로 유효한 결과물을 구분하는 원문 대조 게이트
+
+> Private repository (separate account) — available on request.
 
 ### Korean Tax Calculation Engine `Private`
 
@@ -77,6 +80,8 @@ LLM이 세액을 암산하지 않도록, 계산은 결정론 엔진이 하고 �
 - 골든 테스트와 세율표 출처 ↔ 법령 원문 해시 대조 검사
 - 한계 명시: 참고용 계산이며 신고 책임은 사용자에게 있음. 해석이 갈리는 쟁점은 `주의`로 표시하고, 지원 연도 밖이거나 입력이 부족하면 추정하지 않고 멈춤
 
+> Private repository — available on request.
+
 ### KRW Valuation Toolkit `Private`
 
 QuantLib 기반으로 원화 시장 평가 엔진을 묶고, 은행이 제시한 파생상품 평가금액을 공개 시장데이터로 독립 재계산하는 검토자용 도구입니다.
@@ -86,6 +91,8 @@ QuantLib 기반으로 원화 시장 평가 엔진을 묶고, 은행이 제시한
 - 결산 검산: 통화선도·통화스왑 평가명세를 계약조건과 공개 데이터로 재계산해 사전에 정한 허용오차로 PASS/CHECK 판정
 - 유효이자율(IFRS 9) 상각표와 위험회피회계 보조 계산, 테스트는 전부 오프라인·합성 데이터
 - 한계 명시: 장부 기준 평가가 아니라 검토용 도구. 무료 원화 IRS·CRS 베이시스 커브가 없어 일부 모형은 단순화하며, `CHECK`는 "은행이 틀렸다"가 아니라 "더 확인할 것"이라는 뜻
+
+> Private repository — available on request.
 
 ### [ChatGPT Web Jjonku Writer](https://github.com/kims6305-bjk/chatgpt-web-jjonku-writer)
 
@@ -196,13 +203,13 @@ DOMAIN FIRST  →  SOURCE OF TRUTH  →  SMALL BUILD  →  REAL MEASUREMENT  →
 I majored in accounting and hold a master's degree in big data. Since July 2017 I have worked in accounting and tax (8 years 5 months of active experience), covering financial closing, DART/XBRL disclosure, tax and internal control at a KOSPI-listed company, and working as a data analyst on outside projects. I turn business problems into data analysis and working AI systems, and I value **official sources, reproducible measurement and real execution results** over feature counts.
 
 - **Pareto Measurement Gates** — a public harness that measures quality and cost together to decide whether a verification layer is kept, reduced or removed (pre-registration → blind scoring → statistical verdict).
-- **Accounting & tax intelligence** *(sanitized)* — cited answers grounded in K-IFRS, tax law, rulings and interpretations, measured with gold sets and replays.
+- **Accounting & tax intelligence** *(private repo)* — cited answers grounded in K-IFRS, tax law, rulings and interpretations, measured with gold sets and replays.
 - **Korean tax calculation engine** *(private repo)* — a deterministic calculator (75 tools, CLI/MCP) built only from statutes and official NTS materials, so the LLM explains and never computes the tax itself.
 - **KRW valuation toolkit** *(private repo)* — QuantLib-based valuation engines plus an independent, reproducible check of bank FX forward / cross-currency swap statements from public market data (a reviewer's tool, not a valuation of record).
 - **Agent safety tooling** — fail-closed browser action receipts, local-only app security checks, a guarded ChatGPT-web Git writer, and an MCP gateway that shares one logged-in browser across agents behind a human approval gate the agent can't approve itself.
 - **n8n to Agent Conversion** — a CLI that turns n8n workflows into Hermes / Claude Code skills: deterministic templates first, an OAuth-logged-in agent CLI (no API key) only for the rest.
 
-Every public repo states its limits. Internal data and endpoints are never published; portfolios use synthetic data and anonymized results only.
+Every public repo states its limits. Internal data and endpoints are never published; portfolios use synthetic data and anonymized results only. Private repositories are available on request.
 
 ---
 
